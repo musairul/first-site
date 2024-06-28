@@ -1,0 +1,263 @@
+* {
+  /* outline:1px solid red; */
+}
+
+/*-------MOBILE DESIGN--------*/
+
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /*removes default margin and padding*/
+  color: #f9faf8;
+  background-color: #1f2937;
+}
+
+/*Header/navbar section*/
+
+header {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 20px; /*padding from the top and bottom*/
+}
+
+nav {
+  display: flex;
+  flex-direction: column; /*mobile first layout*/
+  align-items: center;
+}
+
+a {
+  color: #f9faf8;
+  text-decoration: none; /*removes underlines from links*/
+  margin: 10px 0px; /*adds gap between links - bottom, sides*/
+}
+
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px; /*creates gap in mobile layout from Header Logo title and links*/
+}
+
+.hero {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 50px 20px; /*topbottom sides padding*/
+  text-align: center;
+}
+
+.hero-content {
+  margin-bottom: 20px; /*adds gap between text and img on mobile layout*/
+}
+
+h1 {
+  /*specifying these details allow it to be automatically resizable*/
+  font-size: 36px;
+  font-weight: extra-bold;
+  margin: 0 0 20px 0;
+}
+
+.hero p {
+  /*same with these*/
+  font-size: 18px;
+  color: #e5e7eb;
+  margin-bottom: 20px;
+}
+
+.hero-image {
+  flex: 1; /*lets the image grow and shrink*/
+  height: 200px;
+  overflow: hidden; /*if its cut off by the page doesnt show it*/
+}
+
+.hero-image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+button {
+  background-color: #3882f6;
+  color: #f9faf8;
+  border: none; /*removes slight black border buttons have*/
+  padding: 10px 30px; /*adds topbottom and sides padding*/
+  border-radius: 8px; /*rounds corners*/
+  font-weight: bold;
+  cursor: pointer;
+}
+
+h2 {
+  text-align: center;
+  font-size: 30px;
+  font-weight: extra-bold;
+}
+
+/*information section*/
+.info {
+  background-color: #f9faf8;
+  color: #1f2937;
+  padding: 50px 0px; /*padding topbottom*/
+  text-align: center; /*for some reason this also aligns images*/
+}
+
+.info-boxes {
+  display: flex;
+  flex-wrap: wrap; /*makes the boxes wrap on new line*/
+  justify-content: center; /*cenrte images/text*/
+  margin-top: 30px; /*distances from title*/
+}
+
+.box {
+  width: 150px; /*define width of a box*/
+  margin: 20px; /*adds 20px spacing all around each box*/
+}
+
+.box img {
+  width: 150px;
+  height: 150px;
+  border: 4px solid #3882f6;
+  border-radius: 15px;
+  margin-bottom: 10px;
+  object-fit: cover;
+}
+
+.quote {
+  background-color: #e5e7eb;
+  color: #1f2937;
+  padding: 50px 20px;
+}
+
+blockquote {
+  font-size: 24px;
+  font-style: italic;
+  font-weight: light;
+  margin: 0;
+}
+
+cite {
+  display: block; /*gives the quote its own block*/
+  text-align: right;
+  font-weight: bold;
+  margin-top: 10px; /*adds some spacing*/
+}
+
+.call-to-action {
+  margin: 50px 20px; /*seperates blue cta box without bg colour extending*/
+  background-color: #3882f6;
+  padding: 30px;
+  border-radius: 10px;
+  text-align: center;
+}
+
+.call-to-action h3 {
+  margin: 0 0 10px 0;
+}
+
+.call-to-action button {
+  border: 2px solid #f9faf8;
+  margin-top: 20px;
+}
+
+footer {
+  text-align: center;
+  padding: 20px;
+  font-size: 14px;
+}
+
+/*-------LAPTOP DESIGN---------*/
+
+@media screen and (min-width: 768px) {
+  /*specifies changes in css for big screens*/
+  header {
+    /*header contains the logo and nav*/
+    flex-direction: row;
+    justify-content: space-between; /*seperates the logo and nav as much as possible*/
+    padding: 20px 50px; /*topbottom and sides*/
+  }
+
+  .logo {
+    margin-bottom: 0; /*centres header logo with links*/
+  }
+
+  nav {
+    flex-direction: row;
+    gap: 20px;
+  }
+
+  .hero {
+    flex-direction: row;
+    align-items: stretch; /*for some reason this aligns the img height and box height*/
+    justify-content: space-between; /*makes image go to right hand side*/
+    padding: 100px 50px;
+    text-align: left;
+  }
+
+  .hero-content {
+    flex: 1;
+    margin-right: 50px;
+    margin-bottom: 0;
+  }
+
+  h1 {
+    font-size: 48px;
+  }
+
+  .hero-image {
+    height: 250px;
+  }
+
+  .info {
+    padding: 50px;
+  }
+
+  h2 {
+    font-size: 36px;
+  }
+
+  .box {
+    width: 200px;
+  }
+
+  .box img {
+    width: 200px;
+    height: 200px;
+  }
+
+  .quote {
+    padding: 100px 200px;
+  }
+
+  blockquote {
+    font-size: 36px;
+  }
+
+  .call-to-action {
+    margin: 100px 200px; /*makes the cta box in line with the other elements*/
+    padding: 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    text-align: left;
+  }
+
+  .call-to-action button {
+    margin-top: 0;
+  }
+
+  button {
+    margin-bottom: 0px;
+  }
+}
+
+@media screen and (min-width: 1024px) {
+  /*for massive screens*/
+  header,
+  .hero,
+  .info,
+  .cta {
+    padding-left: 200px;
+    padding-right: 200px;
+  }
+}

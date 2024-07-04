@@ -1,4 +1,4 @@
-# op-firstsite
+# first-site
 
 Created first webpage from odin project along with mobile design
 
